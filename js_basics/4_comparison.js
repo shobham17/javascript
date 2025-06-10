@@ -15,3 +15,9 @@ console.log(null>=0) //true
 // === this is called strict check
 console.log("2" === 2)
 //here it does not convert and compare
+
+
+//create a function
+const myfunction = function(){
+    console.log("hello world")
+}
