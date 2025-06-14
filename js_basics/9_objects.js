@@ -66,3 +66,27 @@ console.log(tinderuser)
 console.log(Object.keys(tinderuser))
 console.log(Object.values(tinderuser))
 console.log(Object.entries(tinderuser))
+
+const course = {
+    coursename : "js in hindi",
+    price : "999",
+    courseinstructor : "shobham"
+}
+
+const {courseinstructor : instructor } = course
+console.log(instructor)
+
+
+
+{
+    name =  "shobham",
+    "courseaname"  :   "js in hindi",
+    "prize" :  "free"
+}
+
+[
+    {},
+    {},
+    {}
+]
+
