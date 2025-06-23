@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: lightslategray;
+            color: darkred;
+        }
+    </style>
+</head>
+<body class = "bg-black">
+    <div>
+        <h1 id="title" class ="heading">Dom learning on chai aur code  <span style="display: none;">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
+
+
+
+1. DOM Selectors Overview
+getElementsByTagName(tagName)
+Returns an HTMLCollection of matching elements.
+
+const divs = document.getElementsByTagName('div');
+console.log(divs); 
+
+
+getElementsByClassName(className)
+Also returns a live HTMLCollection.
+
+const items = document.getElementsByClassName('item');
+console.log(items); // HTMLCollection
+
+
+getElementsByName(name)
+Returns a live NodeList of elements with a name attribute.
+
+const inputs = document.getElementsByName('username');
+console.log(inputs); // NodeList
+
+
+2. querySelector(selector) & querySelectorAll(selector)
+querySelector
+Returns the first matching Element or null.
+
+const firstBtn = document.querySelector('.btn');
+console.log(firstBtn); // Element
+
+
+querySelectorAll
+Returns a static NodeList (not live).
+
+const buttons = document.querySelectorAll('.btn');
+console.log(buttons); // NodeList
+
+
+4. Practical Examples
+
+Iterating NodeList:
+const nodes = document.querySelectorAll('p');
+nodes.forEach(p => console.log(p.textContent));
+
+Iterating HTMLCollection:
+const elems = document.getElementsByClassName('item');
+for (const el of elems) {
+  console.log(el.id);
+}
+
+Converting to Array:
+const elemsArr = Array.from(document.getElementsByTagName('li'));
+elemsArr.map(li => li.textContent);
