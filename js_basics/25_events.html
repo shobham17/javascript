@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body>
+    <script>
+        document.getElementById('owl').addEventListener('click',function(e){
+            console.log("click inside the ul")
+        },false )
+
+        document.getElementById('owl').addEventListener('click',function(e){
+            console.log("owl clicked")
+            e.stopPropagation()
+        },false)
+
+        document.getElementById('google').addEventListener('click',function(e){
+            console.log("google clicked");
+            e.preventDefault();
+            e.stopPropagation()
+        },false)
+
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e.target.tagName);
+            if(e.target.tagName){
+                let removeIt=e.target.parentNode            }
+            
+            removeIt=remove()
+        })
+    </script>
+</body>
+</html>
